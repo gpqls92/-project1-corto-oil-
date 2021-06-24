@@ -63,11 +63,12 @@
 }
 .body-1 figure{ 
     width:50%; 
-    float: left;}
+    /* float: left; */
+}
 
 .body-1 figure img{
-    width: 280px;
-    height: 300px;
+    width: 45%;
+    /* height: 300px; */
 }
 
 .body-1 div{
@@ -114,7 +115,12 @@
     justify-content: space-between;
     align-items: center;
 }
-.body-2 figure{ width:45%; }
+.body-2 figure{ width:45%; 
+}
+.body-2 figure img{
+    width: 80%;
+    /* height: 300px; */
+}
 
 .body-2 div{
     width:50%;  
@@ -162,8 +168,8 @@
 .body-3 figure{ width:50%; }
 
 .body-3 figure img{
-    width: 180px;
-    height: 300px;
+    width: 30%;
+    /* height: 300px; */
 }
 
 .body-3 div{
@@ -208,6 +214,10 @@
     align-items: center;
 }
 .body-4 figure{ width:50%; 
+}
+.body-4 figure img{
+    width: 80%;
+    /* height: 300px; */
 }
 
 .body-4 div{
