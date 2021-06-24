@@ -1,0 +1,366 @@
+@import url('./common.css');
+
+
+
+
+
+
+/* .body-1 */
+
+.body-1 {
+    text-align: middle;
+    background-color:#696644;
+    height:60vh;
+    overflow:hidden;
+}
+.body-1 video{
+    width: 100%; 
+    align-items:center;
+}
+.body-1 p{
+    position: absolute; 
+    top: 50%; width: 100%;
+    margin-top: -24px; text-align: center;color: #fefffd;
+}
+.body-1 p:nth-of-type(1){
+    font-size: 2.5rem;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.body-1 p:nth-of-type(2){
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+
+
+/* .body-2 */
+
+.body-2{ 
+    margin: 10% auto; 
+    width: 80%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.body-2 figure{ width:45%; }
+.body-2 figure img{
+    width:100%;
+}
+.body-2 div{
+    width:50%;  
+    /* box-sizing: border-box; */
+    text-align: middle;
+    margin: 0 auto;
+}
+
+.body-2 div h3{
+    font-size:2rem; 
+}
+
+.body-2 div h3 em{
+    font-size:2rem; color: #97aa8a;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.body-2 div p{ 
+    margin: 30px 0; color:#555; 
+}
+/* 이미지와 텍스트의 거리가 가까운데 어떻게 설정해야 할까요? */
+
+   
+
+
+
+
+/* .body-3 */
+
+.body-3{
+    width: 100%; 
+    background-color: #6a7a01;
+    padding: 4% 0;
+}
+.body-3 h2{
+    text-align:center; 
+    font-size:2.5rem; color: #fefffd;
+    margin: 0;
+} 
+.body-3 ul{
+    width:80%; margin:50px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.body-3 ul li{
+    width: 20%;
+    margin: 30px auto;
+    position: relative;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* float: left; */
+}
+.body-3 li:hover{
+    transform:scale(1.3);  
+}
+.body-3 ul li span{
+    padding: 0px 10px;
+    text-align: center; 
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.6;
+    font-size: 2rem;color: #333;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.body-3 li p{
+    font-size: 1.3rem; 
+    color: #333; 
+    text-align: center;
+    font-weight: normal;
+}
+.body-3 li img{
+    width: 100%; 
+}
+
+/* .body-3 li .text p{
+    font-size: 0.8rem;
+    text-align: center;
+ 
+} */
+
+
+/* float;left로 가로정렬했을 때 다른 contents가 들어와 방해하고 background가 h2에만 적용됩니다.ㅠㅠ */
+
+
+
+
+
+
+/* .body-4 */
+
+.body-4{
+    width:80%; margin: 0 auto; padding: 6% 0 8%;
+}
+
+.body-4 h2{
+    font-size: 2.5rem; color: #333; text-align: center;
+}
+.body-4 p{
+    font-size: 1.3rem; 
+    color: #333; text-align: center;
+    margin: 20px 0 50px 0;
+}
+.body-4 figure{
+    text-align: center;
+    display:flex; justify-content: space-between;
+}
+.body-4 figure img{
+    width: 180px; height: 180px;
+    position: relative;
+    border-radius: 10px;
+    transition: .3s;
+    margin: 10px;
+}
+.body-4 figure img:hover{
+    transform: scale(1.2);
+    width: 180px;
+    height: 180px;
+}
+
+
+
+
+
+
+@media (max-width:768px){
+.header .footer{display: none;}
+html,body{margin:0;}
+ul,li,ol{
+    list-style-type:none;
+    margin:0; 
+    padding:0;
+}
+h1,h2,h3,h4,h5,h6,figure,p{margin:0;}
+img{vertical-align: top;}
+a{text-decoration: none;}
+
+
+
+
+h1,h2,h3,h4{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+*{ 
+    font-family:sans-serif;
+    box-sizing: border-box;
+    font-size:12px;
+    color:#555;
+}
+
+/* .body-1 */
+
+.body-1 {
+    text-align: center;
+    background-color:#696644;
+    height: auto;
+    overflow:hidden;
+    padding-bottom: 30px;
+}
+.body-1 video{
+    width: 230%; 
+    align-items:center;
+}
+.body-1 p{
+    position: static; 
+    top: 45%; width: 100%;
+    margin-top: 10px; text-align: center; color: #fefffd;
+}
+.body-1 p:nth-of-type(1){
+    font-size: 1.3rem;
+    margin: 20px auto 10px auto;
+}
+.body-1 p:nth-of-type(2){
+    font-size: 1rem;
+}
+
+
+
+/* .body-2 */
+
+.body-2{ 
+    margin: 10% auto; 
+    width: 80%;
+    display:block;
+    justify-content: space-between;
+    align-items: center;
+}
+.body-2 figure{ width:100%; }
+.body-2 figure img{
+    width:100%;
+}
+.body-2 div{
+    width:80%;  
+    /* box-sizing: border-box; */
+    text-align:center;
+}
+
+.body-2 div h3{
+    font-size:1.5rem; 
+    margin: 20px 0;
+}
+
+.body-2 div h3 em{
+    font-size:2rem; color: #97aa8a;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.body-2 div p{ 
+    margin: 30px 0; color:#555; 
+}
+/* 이미지와 텍스트의 거리가 가까운데 어떻게 설정해야 할까요? */
+
+   
+
+
+
+
+/* .body-3 */
+
+.body-3{
+    width: 100%; 
+    background-color: #6a7a01;
+    padding: 10% 0;
+}
+.body-3 h2{
+    text-align:center; 
+    font-size:1.8rem; color: #fefffd;
+    margin: 0;
+} 
+.body-3 ul{
+    width:80%; 
+    margin:0 auto 0 auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.body-3 ul li{
+    width: 40%;
+    margin: 30px auto;
+    position: relative;
+    /* justify-content: center; 
+    text-align: center;
+    float: left; */
+}
+.body-3 li:hover{
+    transform:scale(0)  
+}
+.body-3 ul li span{
+    padding: 0px 10px;
+    text-align: center; 
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.5;
+    font-size: 1.5rem;color: #333;
+    font-weight:normal;
+    text-transform: capitalize;
+}
+.body-3 li p{
+    font-size: 1rem; 
+    color: #333; 
+    text-align: center;
+    font-weight: normal;
+}
+.body-3 li img{
+    width: 100%; 
+}
+
+/* .body-3 li .text p{
+    font-size: 0.8rem;
+    text-align: center;
+ 
+} */
+
+
+/* float;left로 가로정렬했을 때 다른 contents가 들어와 방해하고 background가 h2에만 적용됩니다.ㅠㅠ */
+
+
+
+
+
+
+
+/* .body-4 */
+
+.body-4{
+    width:80%; margin: 0 auto; padding: 10% 0; 
+}
+
+.body-4 h2{
+    font-size: 1.8rem; color: #333; text-align: center;
+}
+.body-4 p{
+    font-size: 1.3rem; 
+    color: #333; text-align: center;
+    margin: 20px 0 30px 0;
+}
+.body-4 figure{
+    text-align: center;
+    display:block; justify-content: space-between;
+}
+.body-4 figure img{
+    width: 120px; height: 120px;
+    position: relative;
+    border-radius: 10px;
+    transition: .3s;
+    margin: 10px;
+}
+.body-4 figure img:hover{
+    transform: scale(1.1);
+    width: 120px;
+    height: 120px;
+}
+}
