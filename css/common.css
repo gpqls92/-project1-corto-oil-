@@ -57,7 +57,6 @@ h1,h2,h3,h4{
     transform: scale(0.9);
     margin:0 20px; 
     /* font-size: 100%;  */
-    font-weight:Medium;
 }
 .header > div figure img{
     margin:0 10px;
@@ -199,7 +198,7 @@ h1,h2,h3,h4{
 
 
 
-@media (max-width:767px){
+@media (max-width:768px){
 .header .footer{display: none;}
 html,body{margin:0;}
 ul,li,ol{
@@ -274,7 +273,6 @@ h1,h2,h3,h4{
     color: #fefffd;
     transform: scale(0.9);
     margin:0 20px; 
-    font-weight:Medium;
     font-size:2rem;
     line-height:2;
     
@@ -422,7 +420,193 @@ h1,h2,h3,h4{
     margin: 0;
     height: 50px;
 }
+}
 
 
 
+
+@media (min-width:769px) and (max-width:1440px){
+    .header .footer{display: none;}
+    html,body{margin:0;}
+    ul,li,ol{
+        list-style-type:none;
+        margin:0; 
+        padding:0;
+    }
+    h1,h2,h3,h4,h5,h6,figure,p{margin:0;}
+    img{vertical-align: top;}
+    a{text-decoration: none;}
+
+    h1,h2,h3,h4{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    *{ 
+        font-family:sans-serif;
+        box-sizing: border-box;
+        font-size:12px;
+        color:#555;
+    }
+
+
+    /* .header */
+
+    .header{
+        background-color: #97aa8a; 
+        width: 100%;
+    }
+    .header > div:nth-of-type(1){
+        text-align: center; 
+        background-color: #fefffd;
+        width:100%;
+        padding:5px;
+        }
+    .header > div:nth-of-type(2){
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding:15px 0;
+    }
+    .header > div p{color: #97aa8a;}
+    .header > div h1 a{
+        color: #fefffd; font-size: 2rem;
+        font-family:Georgia, 'Times New Roman', Times, serif;}
+    .header > div .menu{
+        width: 40%;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .header > div .menu a{
+        color: #fefffd;
+        transform: scale(0.9);
+        margin:0 20px; 
+        /* font-size: 100%;  */
+    }
+    .header > div figure img{
+        margin:0 10px;
+        height:20px;
+    }
+    .header div .menu a:hover{
+        font-weight: bold;
+        border-bottom: 3px solid #fefffd ;
+    }
+
+    .header .menu_trigger{
+        width: 26px;
+        height: 14px;
+        position: relative;
+        display: inline-block;
+        z-index: 99999;
+        display:none;
+    }
+    .header .menu_trigger span{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #fefffd;
+        transition: .5s;
+    }
+    .header .menu_trigger span:nth-child(1){
+        top: 0;
+    }
+    .header .menu_trigger span:nth-child(2){
+        top: calc(50% - 1px);
+    }
+    .header .menu_trigger span:nth-child(3){
+        bottom: 0;
+    }
+    .header .menu_trigger:hover span:nth-child(1){
+        top: calc(50% - 1px);
+        transform: rotate(45deg);
+    }
+    .header .menu_trigger:hover span:nth-child(2){
+        top: calc(50% - 1px);
+        opacity: 0;
+    }
+    .header .menu_trigger:hover span:nth-child(3){
+        bottom: calc(50% - 1px);
+        transform: rotate(-45deg);
+    }
+
+
+
+
+
+
+
+
+    /* .footer */
+
+    .footer{
+        width:100%; 
+        background-color: #b99b3e; 
+        margin-top:7%;
+    }
+    .footer > div > a{
+        color: #fefffd; font-size: 2rem;
+        /* font-weight: bold; */
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .footer > div .menu{
+        width: 40%;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .footer > div .menu a{
+        font-weight: bold; color: #fefffd;
+    }
+    .footer > div figure img{
+        margin:0 10px;
+        height:20px;
+    }
+    .footer > div:nth-of-type(1){
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding:15px 0;
+        border-bottom: 1px solid #fefffd;
+    }
+    .footer > div:nth-of-type(2){
+        text-align: center; 
+        width:100%;
+        padding:10px;
+        }
+    .footer span{
+        margin: 10px;
+    }
+    .footer > div p{
+        margin: 0;
+        color: #fefffd;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .footer > div img{
+        margin:40px; 
+        height:20px;
+        }
+
+
+
+
+    /* .top */
+
+    .top{
+        right: 0;
+        margin: 30px;
+        bottom: 30px;
+        position: fixed;
+    }
+    .top img{
+        margin: 0;
+        height: 45px;
+    }
 }
