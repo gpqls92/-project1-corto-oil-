@@ -199,7 +199,7 @@ h1,h2,h3,h4{
 
 
 
-@media (max-width:767px){
+@media (max-width:768px){
 .header .footer{display: none;}
 html,body{margin:0;}
 ul,li,ol{
