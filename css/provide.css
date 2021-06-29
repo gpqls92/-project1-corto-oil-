@@ -1,0 +1,169 @@
+/* provide(개인정보).css */
+@charset 'utf-8';
+@import url('common.css');
+
+/* .header */
+.header > div .menu a:nth-of-type(3){
+    content: '';
+    display: block;
+    clear: both;
+    margin: 0;
+    border-bottom: 3px solid #fefffd;
+    font-weight: bold;
+}
+
+
+
+/* .text */
+.text{
+    margin: 0 auto;
+    padding: 50px 50px 20px 50px;
+    text-align: center;
+    /* background-color: blanchedalmond; */
+}
+.text span{margin: 10%;}
+.text span h2{
+    margin: 80px 20px 20px 20px;
+    font-size: 2.2rem;}
+.text span h4{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+
+}
+.text span p{
+    margin: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+
+
+/* .table */
+.table{
+    margin: 0; 
+    padding: 5%;
+    width:70%; margin:0 auto;
+    background-color: #f4f4f1;
+    /* font-weight: bold; */
+}
+
+.table li {
+   margin: 20px 0;
+   display:flex;
+   justify-content: space-between;
+}
+.table li p{min-width:45%;}
+.table li p.w100{width:100%;}
+.table li input{
+   display: block;
+   margin: 0;
+   width:100%;
+   height: 30px;
+   border: none;
+}
+
+.table li:nth-of-type(7){
+   margin: 0 43%;
+   align-items: center;
+}
+ 
+input[type='submit']{
+    background: #97aa8a; 
+    border: none; 
+    text-align: center;
+    color: #fefffd;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+@media (max-width:768px){
+    .header .footer{display: none;}
+    html,body{margin:0;}
+    ul,li,ol{
+        list-style-type:none;
+        margin:0; 
+        padding:0;
+    }
+    h1,h2,h3,h4,h5,h6,figure,p{margin:0;}
+    img{vertical-align: top;}
+    a{text-decoration: none;}
+    
+    h1,h2,h3,h4{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    
+    *{ 
+        font-family:sans-serif;
+        box-sizing: border-box;
+        font-size:12px;
+        color:#555;
+    }
+    /* .text */
+.text{
+    margin: 0 auto;
+    padding: 0 auto 20px auto;
+    text-align: center;
+    /* background-color: blanchedalmond; */
+}
+.text span{margin: 10%;}
+.text span h2{
+    margin: 20px 20px 20px 20px;
+    font-size: 2rem;}
+.text span h4{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+
+}
+.text span p{
+    margin: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+/* .table */
+.table{
+    margin: 0; 
+    padding: 5%;
+    width:80%; margin:0 auto;
+    background-color: #f4f4f1;
+    /* font-weight: bold; */
+}
+
+.table li {
+   margin: 20px 0;
+   display:block;
+   justify-content: space-between;
+}
+.table li p{min-width:45%;}
+.table li p.w100{width:100%;}
+.table li input{
+   display: block;
+   margin: 0;
+   width:100%;
+   height: 30px;
+   border: none;
+}
+
+.table li:nth-of-type(7){
+   margin: 0 30%;
+   align-items: center;
+}
+ 
+input[type='submit']{
+    background: #97aa8a; 
+    border: none; 
+    text-align: center;
+    color: #fefffd;
+    font-size: 1.2rem;
+}
+}
