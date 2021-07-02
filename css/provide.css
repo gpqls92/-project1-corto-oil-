@@ -1,7 +1,8 @@
-/* provide(개인정보).css */
+
 @charset 'utf-8';
 @import url('common.css');
 
+/* provide(개인정보).css */
 /* .header */
 .header > div .menu a:nth-of-type(3){
     content: '';
@@ -75,6 +76,7 @@ input[type='submit']{
     text-align: center;
     color: #fefffd;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 
@@ -128,8 +130,6 @@ input[type='submit']{
 }
 
 
-
-
 /* .table */
 .table{
     margin: 0; 
@@ -144,7 +144,10 @@ input[type='submit']{
    display:block;
    justify-content: space-between;
 }
-.table li p{min-width:45%;}
+.table li p{
+    min-width:45%;
+    margin: 15px 0;
+}
 .table li p.w100{width:100%;}
 .table li input{
    display: block;
@@ -165,6 +168,7 @@ input[type='submit']{
     text-align: center;
     color: #fefffd;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 }
 
@@ -252,5 +256,6 @@ input[type='submit']{
         text-align: center;
         color: #fefffd;
         font-size: 1.2rem;
+        cursor: pointer;
     }
 }
