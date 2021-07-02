@@ -1,5 +1,6 @@
 
 @charset 'utf-8';
+
 @import url('common.css');
 
 /* products(상품).css */
@@ -30,7 +31,6 @@
 .top-img figure img{
     width: 100%;
     /* max-height: inherit; */
-    margin-block: -28%;
     align-items: center;
 }
 .top-img .img-p{
@@ -310,7 +310,6 @@ i{
 .top-img figure img{
     width: 100%;
     /* max-height: inherit; */
-    margin-block: -12%;
     align-items: center;
 }
 .top-img .img-p{

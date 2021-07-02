@@ -1,5 +1,6 @@
 
 @charset 'utf-8';
+
 @import url('common.css');
 
 
@@ -74,7 +75,6 @@
 .body-1 div{
     width:50%;  
     /* box-sizing: border-box; */
-    text-align: middle;
 }
 
 .body-1 div h3{
@@ -125,7 +125,6 @@
 .body-2 div{
     width:50%;  
     /* box-sizing: border-box; */
-    text-align: middle;
 }
 
 .body-2 div h3{
@@ -175,7 +174,6 @@
 .body-3 div{
     width:50%;  
     /* box-sizing: border-box; */
-    text-align: middle;
 }
 
 .body-3 div h3{
@@ -223,7 +221,6 @@
 .body-4 div{
     width:50%;  
     /* box-sizing: border-box; */
-    text-align: middle;
 }
 
 .body-4 div h3{
@@ -338,7 +335,6 @@
 .body-1 div{
     width:100%;  
     /* box-sizing: border-box; */
-    text-align: middle;
 }
 
 .body-1 div h3{
@@ -395,7 +391,6 @@
 .body-2 div{
     width:100%;  
     /* box-sizing: border-box; */
-    text-align: middle;
 }
 
 .body-2 div h3{
@@ -454,7 +449,6 @@
 .body-3 div{
     width:100%;  
     /* box-sizing: border-box; */
-    text-align: middle;
 }
 
 .body-3 div h3{
@@ -509,7 +503,6 @@
 .body-4 div{
     width:100%;  
     /* box-sizing: border-box; */
-    text-align: middle;
 }
 
 .body-4 div h3{
@@ -621,7 +614,6 @@
     .body-1 div{
         width:50%;  
         /* box-sizing: border-box; */
-        text-align: middle;
     }
 
     .body-1 div h3{
@@ -672,7 +664,6 @@
     .body-2 div{
         width:50%;  
         /* box-sizing: border-box; */
-        text-align: middle;
     }
 
     .body-2 div h3{
@@ -722,7 +713,6 @@
     .body-3 div{
         width:50%;  
         /* box-sizing: border-box; */
-        text-align: middle;
     }
 
     .body-3 div h3{
@@ -770,7 +760,6 @@
     .body-4 div{
         width:50%;  
         /* box-sizing: border-box; */
-        text-align: middle;
     }
 
     .body-4 div h3{
