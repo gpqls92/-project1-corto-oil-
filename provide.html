@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>provide</title>
     <link href="./css/provide.css" rel="stylesheet">
+
+    <meta property="og:title" content="CORTO OIL">
+    <meta property="og:url" content="https://gpqls92.github.io/-project1-corto-oil-/">
+    <meta property="og:image" content="img/food_img.jpg">
+    <meta property="og:description" content="Say hello to fresh extra virgin olive oil.">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CORTO OIL">
+    <meta name="twitter:url" content="https://gpqls92.github.io/-project1-corto-oil-/">
+    <meta name="twitter:image" content="img/food_img.jpg">
+    <meta name="twitter:description" content="Say hello to fresh extra virgin olive oil.">
+
+    <link rel="shortcut icon" href="img/16x16.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114*114" href="img/114x114.png">
 </head>
 <body>
 
@@ -27,13 +41,21 @@
                 <a href="https://corto-olive.com/"><img src="img/pg_message.png" alt="message"></a>
             </figure> 
             
-            <a class="menu_trigger">
+            <a class="menu-trigger">
                 <span></span>
                 <span></span>
                 <span></span>
             </a> 
         </div>
     </header>
+    <script>
+        const elBurger = document.querySelector('.menu-trigger');
+        const elNav = document.querySelector('.menu');
+        elBurger.addEventListener('click',function(){
+            this.classList.toggle('active-1');
+            elNav.classList.toggle('active');
+        })
+    </script>
 
 
 

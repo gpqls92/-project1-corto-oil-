@@ -20,7 +20,7 @@ address{font-style: normal;}
 *{ 
     font-family:sans-serif;
     box-sizing: border-box;
-    font-size:16px;
+    font-size:18px;
     color:#555;
 }
 
@@ -259,9 +259,9 @@ address{font-style: normal;}
         align-items: center;
         flex-direction: column;
         padding:10vw 0;
-
-        display:none;
+        opacity: 0;
     }
+    .header >div .menu.active{opacity: 1;}
     .header > div .menu a{
         color: #fefffd;
         transform: scale(0.9);
@@ -280,14 +280,14 @@ address{font-style: normal;}
         border-bottom: 3px solid #fefffd ;
     }
 
-    .header .menu_trigger{
+    .header .menu-trigger{
         width: 26px;
         height: 14px;
         position: relative;
         display: inline-block;
         z-index: 99999;
     }
-    .header .menu_trigger span{
+    .header .menu-trigger span{
         position: absolute;
         left: 0;
         width: 100%;
@@ -295,45 +295,26 @@ address{font-style: normal;}
         background-color: #fefffd;
         transition: .5s;
     }
-    .header .menu_trigger span:nth-child(1){
+    .header .menu-trigger span:nth-child(1){
         top: 0;
     }
-    .header .menu_trigger span:nth-child(2){
+    .header .menu-trigger span:nth-child(2){
         top: calc(50% - 1px);
     }
-    .header .menu_trigger span:nth-child(3){
+    .header .menu-trigger span:nth-child(3){
         bottom: 0;
     }
-    .header .menu_trigger:hover span:nth-child(1){
+    .header .menu-trigger.active-1 span:nth-child(1){
         top: calc(50% - 1px);
         transform: rotate(45deg);
     }
-    .header .menu_trigger:hover span:nth-child(2){
+    .header .menu-trigger.active-1 span:nth-child(2){
         top: calc(50% - 1px);
         opacity: 0;
     }
-    .header .menu_trigger:hover span:nth-child(3){
+    .header .menu-trigger.active-1 span:nth-child(3){
         bottom: calc(50% - 1px);
         transform: rotate(-45deg);
-    }
-    .header > nav > div{
-        position: fixed;
-        left: 0; top: 0;
-        width: 100%; height: 100%;
-        background-color: #555;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        display: none;
-    }
-    .header > nav > div a{
-        padding: 30px 0;
-        color: #fefffd;
-        font-size: 3em;
-    }
-    .header .menu_trigger:hover + div {
-        display: flex;
     }
 
 

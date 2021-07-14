@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3_data_calc.html -->
+    <script>
+
+        document.write('<h2>산술연산자</h2>');
+
+        var x = 10, dx=20, total=0;
+        document.write(x+'+'+dx+'='+(x+dx));
+        document.write('<br>20-10 = '+(dx-x));
+        document.write('<br>20*10 = '+(dx*x));
+        document.write('<br>20/10 = '+(dx/x));
+        document.write('<br>20%10 = '+(dx%x));
+
+        x++; dx++;
+        document.write(`<br>x++ =${x}, dx++ =${dx}`);
+        document.write(`<br>x++ =${x++}, dx++ =${dx++}`);
+        document.write(`<br>x =${x}, dx =${dx}`);
+        document.write(`<br>++x =${++x}, ++dx =${++dx}`);
+        document.write(`<br>x=x+1 =${x=x+2}, dx=dx+1 =${dx=dx+2}`);
+        
+        // backtick('')
+        // 문자와 숫자(or 변수)를 + 연결하면 
+        // => 문자형(string) 데이터가 됩니다.
+
+        document.write('<hr><h2>할당연산자</h2>');
+
+        document.write( `total = x (${total=x})` );
+        document.write( `<br>total += x (${total += x})` );
+        document.write( `<br>total -= x (${total -= x})` );
+        document.write( `<br>total += 'string' (${total += 'string'})` );
+                                                     /* 15string */
+        document.write( `<br>total -= 'string' (${total -= 'string'})` );
+
+
+
+
+        document.write('<hr><h2>비교연산자</h2>');
+
+        document.write(`x(15) > dx(25) = ${x > dx}`);
+        document.write(`<br>x(15) < dx(25) = ${x < dx}`);
+        document.write(`<br>x(15) == dx(25) = ${x == dx}`);
+
+        x = 25;
+        document.write(`<br>x(25) == dx(25) = ${x == dx}`);
+        document.write(`<br>x(25) != dx(25) = ${x != dx}`);
+
+        document.write(`<br>x(25) === dx(25) = ${x === dx}`);
+        x = '25';
+        document.write(`<br>x('25') === dx(25) = ${x === dx}`);
+        document.write(`<br>x('25') == dx(25) = ${x == dx}`);
+
+
+
+
+
+
+        document.write('<hr><h2>논리연산자</h2>');
+        document.write(`(x==dx) && (x=='25')=> ${(x==dx) && (x=='25')}`);
+        //AND연산(2개의 비교연산이 ture일 때 => true 상태가 됨)
+
+        document.write(`<br>(x==dx) || (x=='25') => ${(x==dx) && (x=='25')}`);
+        //OR연산(2개의 비교연산 결과값이 하나라도 ture라면 결과값은 true)
+
+        var not = !true;
+        document.write(`<br>var not = !true (${not})`);
+        //NOT연산(2개의 비교연산 결과값이 하나라도 ture라면 결과값은 true)
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
