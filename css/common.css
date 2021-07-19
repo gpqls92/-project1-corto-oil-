@@ -122,7 +122,7 @@ address{font-style: normal;}
     .footer{
         width:100%; 
         background-color: #b99b3e; 
-        margin-top:7%;
+        /* margin-top:7%; */
     }
     .footer > div > a{
         color: #fefffd; font-size: 2rem;
@@ -324,7 +324,7 @@ address{font-style: normal;}
     .footer{
         width:100%; 
         background-color: #b99b3e; 
-        margin-top:7%;
+        /* margin-top:7%; */
     }
     .footer > div > a{
         color: #fefffd; font-size: 2rem;
@@ -512,7 +512,7 @@ address{font-style: normal;}
     .footer{
         width:100%; 
         background-color: #b99b3e; 
-        margin-top:7%;
+        /* margin-top:7%; */
     }
     .footer > div > a{
         color: #fefffd; font-size: 2rem;

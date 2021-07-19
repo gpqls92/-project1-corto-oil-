@@ -2,6 +2,63 @@
 
 @import url('./common.css');
 
+    /* .popup */
+    .node-1{
+        width:100%; height:100%;
+        position:fixed;
+        left:0; top:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 3;
+        display: none;
+    }
+    .node-1 div{
+        padding: 100px 30px 0 0;
+        display: block;
+
+    }
+    .node-1 h3{
+        font-size: 1.8rem;
+        color: #c2c4c1;
+    }
+    .node-1 h3 em{
+        font-size: 1.8rem;
+        color: #97aa8a;
+    }
+    .node-1 p{
+        padding: 10px 0;
+        font-size: 1rem;
+        color: #b6b071;
+    }
+    .node-1 a{
+        font-size: 1.2rem;
+        color: #c2c4c1;
+        display:inline-block;
+        background-color:#a37c04;
+        padding:8px 20px;
+        border-radius: 10px;
+        
+    }
+    .node-1 a:hover{
+        background-color: #775a02;
+        color:#c2c4c1;
+        font-weight: bold;
+    }
+    .node-1 figure{
+        margin: 0;
+        padding: 20px;
+        width:40%;
+    }
+    .node-1.active{
+        display:flex;
+    }
+
+
+
+
+
 
     /* .body-1 */
 
@@ -136,37 +193,52 @@
 
     /* .body-4 */
 
-    .body-4{
-        width:80%; margin: 0 auto; padding: 6% 0 3%;
-    }
+.body-4{
+    width:80%; margin: 0 auto; padding: 7% 0 7%;
+    overflow: hidden;
+}
 
-    .body-4 h2{
-        font-size: 2.5rem; color: #333; text-align: center;
-    }
-    .body-4 p{
-        font-size: 1.3rem; 
-        color: #333; text-align: center;
-        margin: 20px 0 50px 0;
-    }
-    .body-4 figure{
-        text-align: center;
-        display:flex; justify-content: space-between;
-    }
-    .body-4 figure img{
-        width: 160px; height: 160px;
+.body-4 h2{
+    font-size: 2.5rem; color: #333; text-align: center;
+}
+.body-4 p{
+    font-size: 1.3rem; 
+    color: #333; text-align: center;
+    margin: 20px 0 50px 0;
+}
+.body-4 figure{
+    text-align: center;
+    /* display:flex; justify-content: space-between; */
+}
+.body-4 figure img{
+    /* flex-shrink: 0; */
+    width: 190px; height: 190px;
+    position: relative;
+    border-radius: 10px;
+    transition: .3s;
+    margin: 0 0px;
+}
+.body-4 figure img:hover{
+    transform: scale(1.1);
+    /* width: 180px;
+    height: 180px; */
+}
+
+    /* .imgplay{
+        margin: 80px 0 0;
+        display: flex;
         position: relative;
-        border-radius: 10px;
-        transition: .3s;
-        margin: 0 1px;
+        left: 50%;
+        transform: translateX(-2.5%);
     }
-    .body-4 figure img:hover{
-        transform: scale(1.2);
-        width: 160px;
-        height: 160px;
+    .imgplay a{
+        display: block;
+        width: 10px; height: 10px;
+        border-radius: 100%;
+        background-color: #b6b071;
+        margin: 10px 10px; 
     }
-
-
-
+    .imgplay a.active{background-color: #6a7a01;} */
 
 
 
@@ -195,6 +267,63 @@ h1,h2,h3,h4{
     font-size:12px;
     color:#555;
 }
+
+/* .popup */
+.node-1{
+    margin: 0;
+    width:100%; height:100%;
+    position:fixed;
+    left:0; top:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    display:none;
+    z-index: 1;
+}
+.node-1 div{
+    padding: 100px 30px 0 0;
+    display: block;
+
+}
+.node-1 h3{
+    font-size: 1.8rem;
+    color: #c2c4c1;
+}
+.node-1 h3 em{
+    font-size: 1.8rem;
+    color: #97aa8a;
+}
+.node-1 p{
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #b6b071;
+}
+.node-1 a{
+    font-size: 1.2rem;
+    color: #c2c4c1;
+    display:inline-block;
+    background-color:#a37c04;
+    padding:8px 20px;
+    border-radius: 10px;
+}
+.node-1 a:hover{
+    background-color: #775a02;
+    color:#c2c4c1;
+    font-weight: bold;
+}
+.node-1 figure{
+    margin: 0;
+    padding: 20px;
+    width:40%;
+}
+.node-1.active{
+    display:flex;
+}
+
+
+
+
 
     /* .body-1 */
 
@@ -346,7 +475,8 @@ h1,h2,h3,h4{
     }
     .body-4 figure{
         text-align: center;
-        display:block; justify-content: space-between;
+        display:block; 
+        justify-content: space-between;
     }
     .body-4 figure img{
         width: 120px; height: 120px;
@@ -357,8 +487,6 @@ h1,h2,h3,h4{
     }
     .body-4 figure img:hover{
         transform: scale(1.1);
-        width: 120px;
-        height: 120px;
     }
 }
 
@@ -545,19 +673,15 @@ h1,h2,h3,h4{
         display:block; justify-content: space-between;
     }
     .body-4 figure img{
-        width: 140px; 
-        height: 140px;
+        width: 130px; 
+        height: 130px;
         position: relative;
         border-radius: 10px;
         transition: .3s;
-        margin: 10px;
+        margin: 0px auto;
     }
     .body-4 figure img:hover{
         transform: scale(1.2);
-        width: 140px;
-        height: 140px;
     }
 
 }
-    
-  
