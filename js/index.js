@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
     /* popup */
     $('.popup figure img').on('click',function(){
-        S(this).hide();
+        $('.popup').hide();
     });
 
 
