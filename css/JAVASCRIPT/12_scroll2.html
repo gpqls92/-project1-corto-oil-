@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 12_scroll.html -->
+    <header>
+        <nav>
+            <a href="#">menu01</a>
+            <a href="#">menu02</a>
+            <a href="#">menu03</a>
+            <a href="#">menu04</a>
+            <a href="#">menu05</a>
+        </nav>
+    </header>
+    <main>
+        <div class="cotents">
+            <figure class="active"><img src="img/photo-1.jpg"></figure>
+            <figure><img src="img/ple-1.jpg"></figure>
+            <figure><img src="img/photo-2.jpg"></figure>
+            <figure><img src="img/ple-2.jpg"></figure>
+            <figure><img src="img/photo-3.jpg"></figure>
+        </div>
+    </main>
+    <aside>Top</aside>
+    <style>
+        body{margin:0;}
+        header{
+            position:fixed;
+            left:0; top:0;
+            background-color: #000;
+            color:#fff;
+            text-align: center;
+            width:100%;
+            padding:20px 0;
+        }
+        header a{color:#fff}
+        main{height:3000px;}
+        aside{
+            position:fixed;
+            right:0; bottom:0;
+            background-color: #f00;
+            color:#fff; padding:20px;
+            display:none;
+        }
+        aside.active{display:block;}
+
+        figure{
+            margin: 300px 0; 
+            opacity: 0;
+            transition: 1s;
+            transform: translateY(300px);
+        }
+        figure.active{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    </style>
+
+<script>
+    const elHeader = document.querySelector('header');
+    const elAside = document.querySelector('aside');
+    
+
+    window.addEventListener('scroll',function(){
+
+        let domHei = document.documentElement.offsetHeight;
+        let winHei = window.innerHeight;
+
+        // console.log( domHei - winHei );
+        // console.log(window.scrollY);
+        
+        if(domHei - winHei <= window.scrollY){
+            console.log('문서 최하단에 위치함');
+        }
+        
+
+
+        if(window.innerHeight < window.scrollY){
+            elAside.classList.add('active');
+        }else{
+            elAside.classList.remove('active');
+        }
+        
+        /*  
+        window.scrollY 
+        문서가 수직으로 얼마나 스크롤됐는지 픽셀 단위로 반환 
+
+        scrollHeight
+        (document.body.scrollHeight)
+        문서의 총 높이값을 반환
+        */
+    });
+
+    
+    const elImg = document.querySelectorAll('figure');
+    let elHei;
+    let winHei = window.innerHeight;
+
+    window.addEventListener('scroll',function(){
+        for(let i=0; i<elImg.length; i++){
+            elHei = elImg[i].offsetTop;
+
+            if(elHei-winHei <= window.scrollY){
+                elImg[i].classList.add('active');
+            }
+        }
+
+    })
+
+</script>
+
+
+
+
+
+</body>
+</html>

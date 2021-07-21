@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 12_scroll.html -->
+<header>
+    <nav>
+        <a href="#">menu01</a>
+        <a href="#">menu02</a>
+        <a href="#">menu03</a>
+        <a href="#">menu04</a>
+        <a href="#">menu05</a>
+    </nav>
+</header>
+<main>
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+    <div>04</div>
+    <div>05</div>
+</main>
+<style>
+    header{
+        position: fixed;
+        left: 0; top: 0;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+    }
+    header a{color: #fff;}
+    main{margin-top: 60px;}
+    main div{
+        height: 60vh;
+        font-size: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main div:nth-of-type(even){
+        background-color: #eee;
+    }
+    /* html{scroll-behavior: smooth;
+    } */
+</style>>
+<script>
+    const elNav = document.querySelectorAll('nav a');
+    const elCon = document.querySelectorAll('main div');
+    const elHeader = document.querySelectorAll('header').offsetHeight;
+
+    for(let i=0; i<elNav.length;i++){
+
+        elNav[i].addEventListener('click',function(e){
+            e.preventDefault();
+            elCon[i].scrollIntoView({
+                behavior:"smooth",
+                block:"start",
+                inline:"nearest"
+            });
+
+            /*
+            window.scrollTo({
+                left:0,
+                top:elCon[i].offsetTop,
+                behavior:"smooth"
+            });
+            */
+
+
+            
+            /*
+            scrollIntoView
+            true 콘텐츠 상단이 브라우저 상단에 위치함
+            false 콘텐츠의 하단이 브라우저 하단에 위치함.
+            */
+        })
+    }
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

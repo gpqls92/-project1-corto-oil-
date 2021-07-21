@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- 1_selector.html -->
+    <article>
+        <h2>Selector</h2>
+        <div class="el">
+            <p>$('선택자').메소드();</p>
+            <p>$('선택자').css({color:'red'});</p>
+            <p>$('선택자').css({fontSize:'12px'});</p>
+        </div>
+    </article>
+
+    <article>
+        <h2>text, html</h2>
+        <div class="el2">
+            <p>text 메소드</p>
+            <p>html 메소드</p>
+        </div>
+    </article>
+
+    <article>
+        <h2>class (메소드)</h2>
+        <div class="el3">
+            <p>addClass() 클래스 추가</p>
+            <p class="active">removeClass() 클래스 삭제</p>
+            <p>toggleClass() 토글 클래스</p>
+            <p>hasClass() 해당하는 클래스가 있는지 여부에 따라 true/ false값 반환</p>
+        </div>
+    </article>
+
+    <style>
+        h2{
+            margin-top:100px; 
+            border-bottom:1px solid #000;
+        }
+    </style>
+
+
+    <script>
+        // const el = document.querySelectorAll('.el p');
+        // for(let i=0; i<el.length;i++){
+        //     el[i].style = 'color:red';
+        // }
+
+        // $('선택자').메소드();
+        $('.el p').on('click',function(){
+
+            $(this).css({
+            'color':'red',
+            'fontsize':'40px',
+            marginTop:'0px',
+            borderBottom:'1px solid red'
+            });
+        });
+
+        //text, html, index()
+        $('.el2 p').on('click',function(){
+            // textContent
+            $(this).index() //0,1인텍스값이 나옴.
+
+            if( $(this).index() == 0 ){
+                $(this).text('텍스트 메소드입니다.');
+            }else{
+                $(this).html('<b>HTML</b> 메소드입니다.');
+            }
+        });
+
+        $('.el3 p').on('click',function(){
+
+            switch( $(this).index() ){
+                case 0: $(this).addClass('active'); break;
+                case 1: $(this).removeClass('active'); break;
+                case 2: $(this).toggleClass('active'); break;
+
+                default: console.log( $(this).hasClass('active') );
+            }
+            
+            
+            // $('.el3 p').eq(0).addClass('active');
+            // $('.el3 p').eq(1).removeClass('active');
+            // $('.el3 p').eq(2).toggleClass('active');
+            // $('.el3 p').eq(3).hasClass('active');
+        })
+
+
+
+        console.log($('.el2 p')[1]);
+
+
+    </script>
+</body>
+</html>

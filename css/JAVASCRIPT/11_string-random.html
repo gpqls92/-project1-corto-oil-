@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 11_string-random.html -->
+    <div>
+        <img src="img/ple-1.jpg" id="str1">
+    </div>
+
+    <script>
+
+    let imgSrc, atart, end, str, changeStr,num = 0;
+
+    str1.addEventListener('click',function(){
+        let imgSrc = str1.getAttribute('src');
+        let start = imgSrc.indexOf('-')+1;
+        let end = imgSrc.lastIndexOf('.');
+
+        //수정 전 문자
+        let str = imgSrc.slice(start,end);
+        //수정 후 문자
+        let changeStr = imgSrc.replace(str,ran(str));
+        
+        //화면출력(수정된 문자를 브라우저에 이미지로 화면 출력 2가지 방법)
+        // str1.src = changeStr;
+        str1.setAttribute('src', changeStr);
+    });
+
+        function ran(s){
+            num = Math.floor(Math.random()*4) +1;
+            if(s == num) {
+                ran(s);  //재귀함수
+            }
+            console.log(s,num)
+            return num;
+        }
+    </script>
+
+
+
+
+
+    <div class="locate">
+        <a href="#faq" class="active">FAQ</a>
+        <a href="#notice">NOTICE</a>
+        <a href="#qna">Q&A</a>
+    </div>
+    <style>
+        .locate{text-align: center; margin: 200px 0;}
+        .locate a {color: #000;}
+        .locate a.active{ color : red;}
+    </style>
+    <script>
+        const elA = document.querySelector('.locate');
+
+        elA.addEventListener('click',function(e){
+            e.preventDefault();
+            if(e.target.nodeName == 'A'){
+                location.href = e.target.href;
+
+                const getHref = document.querySelectorAll('.locate a');
+                for(let i=0; i<getHref.length; i++){
+                    if(getHref[i].getAttribute('href') == location.hash){
+                        getHref[i].className = 'active';
+                    }else{
+                        getHref[i].className = '';
+                    }
+                }
+                
+            }
+        })
+        //let hash = location.hash;
+        //hash.substr(1)
+        </script>
+
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 9_offset.html -->
+    <div id="pos1">
+        <img src="img/ple-2.jpg">
+    </div>
+    <style>
+        #pos1{
+            width:500px; margin:100px auto;
+            border:5px dashed #000;
+        }
+        #pos1 img{width:100%;}
+    </style>
+
+    <script>
+        pos1.addEventListener('click',function(){
+            console.log(
+                this.offsetHeight,
+                this.offsetWidth,
+                this.offsetLeft,
+                this.offsetTop
+            );
+
+            console.log(
+                window.innerWidth,
+                window.innerHeight,
+                window.outerWidth,
+                window.outyerHeight
+            )
+        });        
+    </script>
+
+    <!-- ex1 -->
+    <div class="ex">
+        <img src="img/photo-1.jpg">
+        <img src="img/photo-2.jpg">
+        <img src="img/photo-3.jpg">
+        <p></p>
+    </div>
+    <style>
+        .ex{
+            text-align:center; 
+            margin:200px;
+            position:relative;
+        }
+        .ex img{width:300px; margin:0 20px;}
+        .ex p{
+            border:10px dashed red;
+            position:absolute;
+            left:0; top:0;
+            margin:0;
+            transition:.5s;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        const elImg = document.querySelectorAll('.ex img');
+        const elP = document.querySelector('.ex p');
+        
+        elImg.forEach(function(el,k){
+            el.addEventListener('mouseenter',function(){
+                    let _this = this;
+                    let pos = {
+                        w : _this.offsetWidth,
+                        h : _this.offsetHeight,
+                        x : _this.offsetLeft,
+                        y : _this.offsetTop
+                    }
+                    elP.style = `width:${pos.w}px; 
+                                 height:${pos.h}px; 
+                                 left:${pos.x}px; 
+                                 top:${pos.y}px;`;                    
+            });
+        })
+
+    </script>
+
+    <!-- ex2 -->
+    <div class="ex2">
+        <img src="img/photo-1.jpg">
+        <p>
+            <button data-num="0">prev</button>
+            <button data-num="1">next</button>
+        </p>
+    </div>
+    <style>
+        .ex2{text-align: center; margin:200px 0;}
+        .ex2 img{width:200px; transition:.5s;}
+    </style>
+    <script>
+        const elBtn = document.querySelector('.ex2 p');
+        const elImage = document.querySelector('.ex2 img');
+        let num =0;
+
+        elBtn.addEventListener('click',function(e){
+            let idx = e.target.dataset.num;
+            if(idx == undefined) return;
+
+            if(idx == 1){
+                //next
+                if(num < 4) num++;
+            }else{
+                //prev
+                if(num > -4) num--;
+            }
+            let x = elImage.offsetWidth * num;
+            elImage.style = `transform:translateX(${x}px)`;
+            // num 4이상 증가 안됨
+            // num -4이상 감소 안됨
+        })
+    </script>
+
+
+    <!--ex3-->
+    <div class="ex3">
+        <div class="slide">
+            <figure>
+                <img src="img/photo-1.jpg">
+                <img src="img/photo-2.jpg">
+                <img src="img/photo-3.jpg">
+            </figure>
+        </div>
+        <div class="btn">
+            <button>prev</button>
+            <button>next</button>
+        </div>
+    </div>
+    <style>
+        .ex3{
+            width:400px; 
+            margin:200px auto; 
+            text-align:center;
+        }
+        .ex3 .slide{
+            overflow:hidden;        
+        }
+        .ex3 .slide figure{
+            display:flex; margin:0;
+            transition: .5s;
+        }
+        .ex3 .slide figure img{
+            width:100%; 
+            flex-shrink: 0;
+        }
+    </style>
+
+<script>
+    const elFigure = document.querySelector('.ex3 figure');
+    const pnBtn = document.querySelectorAll('.ex3 button');
+
+    let sIdx = 0;
+    for(let i=0;i<pnBtn.length;i++){
+        pnBtn[i].addEventListener('click',function(){
+            if(i==1){
+                if(sIdx < 2) sIdx++;
+            }else{
+                if(sIdx > 0) sIdx--;
+            }
+            slide();
+        });
+    }
+
+    function slide(){
+        elFigure.style=`transform:translateX(${-100*sIdx}%)`;
+    }
+    let loop;
+    function interval(){
+        loop = setInterval(function(){
+                        if(sIdx < 2){
+                            sIdx++;
+                        }else{
+                            sIdx=0;
+                        }
+                        slide();
+                    },2000);
+    }
+    interval();
+    
+    const elSlide = document.querySelector('.slide')
+    elSlide.addEventListener('mouseenter',function(){
+        clearInterval(loop);
+    });
+
+    elSlide.addEventListener('mouseleave',function(){
+        console.log('sss')
+        interval();
+    });
+</script>
+
+
+
+
+</body>
+</html>

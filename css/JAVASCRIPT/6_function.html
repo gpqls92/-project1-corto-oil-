@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 6_function.html -->
+    <article class="ex2">
+        <h2>출석부</h2>
+        <div>
+            <input type="text">
+            <button>저장</button>
+            <ul>
+                <!-- <li>홍길동</li>
+                <li>김용식</li>
+                <li>이영화</li> -->
+            </ul>
+            <input type="button" value="선택삭제">
+            <!-- <button>선택삭제</button> -->
+        </div>
+    </article>
+    <style>
+        .ex2{}
+        .ex2 ul{padding: 0; list-style: none;}
+        .ex2 ul a{
+            cursor: pointer;
+            background: #f00; color:#fff;
+        }
+    </style>
+    <script>
+        const elInput = document.querySelector('.ex2 input[type=text]'),
+              elBtn = document.querySelector('.ex2 button'),
+              elUl = document.querySelector('.ex2 ul'),
+              elBtnDel = document.querySelector('.ex2 input[type=button]');
+
+            let idx = 0;
+
+              elBtn.addEventListener('click',function(){
+                // elUl.innerHTML += `<li><input type='checkbox'>${elInput.value}<a></a></li>`
+                // `<li><input type='checkbox'>${elInput.value}<a></a></li>`
+                // elUl.innerHTML += `<li>${elInput.value}</li>`;
+
+                const cLi = document.createElement('li');
+                const cInput = document.createElement('input');
+                const cA = document.createElement('a');
+                cInput.type = 'checkbox';
+                cA.append('X');
+                cLi.append(cInput);
+                cLi.append(elInput.value);
+                cLi.append(cA);
+                elUl.append(cLi);
+            
+        setTimeout(function(){
+            elDeleteFun();
+            idx++;
+        },100);
+        });
+
+        //선택삭제 클릭이벤트
+        elBtnDel.addEventListener('click', function(){
+            // 1. checked인 체크박스를 선택해서 
+            // 2. 부모요소 li를 삭제하라
+            elDeleteFun('select');
+        });
+
+        function elDeleteFun(str){
+        if(str != 'select'){
+            // X버튼
+            const elX = document.querySelectorAll('.ex2 ul li a');
+            elX[idx].addEventListener('click', function(){
+                // console.log( );
+                this.parentElement.remove();
+                idx--;
+            })
+        }else{
+            // 선택삭제
+            const elCheckbox = document.querySelectorAll('input[type=checkbox]:checked');        
+            for(let i=0; i<elCheckbox.length; i++){
+                elCheckbox[i].parentElement.remove();
+                idx--;
+                }
+            }
+        }
+
+
+//   elInput.nodeValue
+//   elBtn ->클릭문
+//   elUI -> innerHTML
+    
+    
+        let num = 0;
+        function ex1(k, e, c){
+            num = k+e+c;
+            console.log(num)
+        }
+        ex1(50,60,80);
+        ex1(70,90,100);
+
+    </script>
+
+<!-- const cLi = document.createElement('li');
+    const cInput = document.createElement('input');
+    const cA = document.createElement('a');
+
+    cInput.type = 'checkbox';
+    cA.append('X');
+    cLi.append(cInput);
+    cLi.append(elInput.value);
+    cLi.append(cA);
+    elUl.append(cLi); -->
+
+
+
+
+</body>
+</html>
+
+

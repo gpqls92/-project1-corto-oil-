@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+</head>
+<body>
+        <!-- method.html -->
+    <!-- fade -->
+    <style>
+        article{
+            width: 60%; 
+            margin: 100px auto;
+        }
+        .m-01 div:nth-of-type(1){
+            width: 300px;
+            height: 400px;
+            position: relative;
+        }
+        .m-01 div:nth-of-type(1) img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            }
+    </style>
+    <article class="m-01">
+        <h2>fadeIn(), fadeOut()</h2>
+        <div>
+            <img src="../img/ple-1.jpg">
+            <img src="../img/ple-2.jpg">
+            <img src="../img/ple-3.jpg">
+            <img src="../img/ple-4.jpg">
+            <img src="../img/photo-1.jpg">
+            <img src="../img/photo-2.jpg">
+            <img src="../img/photo-3.jpg">
+
+        </div>
+        <div>
+            <button>prev</button>
+            <button>next</button>
+        </div>
+    </article>
+    <script>
+        // fadeIn(),fadeOut(),eq(),not()
+        $('.m-01 div img').not(':first-child').hide();
+
+        let idx, num=0, ea=$('.m-01 div img').length;
+        $('.m-01 div').eq(1).find('button').on('click',function(){
+            
+            idx = $(this).index();
+
+            if(idx){
+                //next
+                fadeAni('next')
+
+            }else{
+                //prev
+                fadeAni('prev')
+            }
+
+        })
+        function fadeAni(k){
+            
+            $('.m-01 div img').eq(num).fadeOut(1000);
+            if(k == 'next'){
+                num++;
+                if(num==ea) num=0;
+            }else{
+                num--;
+                if(num==-1) num=ea-1;
+            }
+            $('.m-01 div img').eq(num).fadeIn(1000);
+        }
+
+    </script>
+
+    <!-- animate -->
+    <article class="m-02">
+        <h2>animate(), stop()</h2>
+        <div>
+            <p></p>
+            <p></p>
+        </div>
+        <button>start</button>
+    </article>
+    <style>
+        .m-02 div{
+            border: 5px solid #000;
+            height: 400px;
+            position: relative;
+        }
+        .m-02 div p{
+            margin: 0;
+            width: 50%;
+            height: 100%;
+            border: 1px solid #f00;
+            background: rgba(255, 0, 0, 0.2);
+
+            position: absolute; top: 0;
+        }
+        .m-02 div p:nth-child(1){left: 0;}
+        .m-02 div p:nth-child(2){right: 0;}
+    </style>
+    <script>
+        let aIdx;
+        $('.m-02 button').on('click',function(){
+            $(this).toggleClass('active');
+            if(  $(this).hasClass('active')  ){
+                aIdx = '-50%';
+            }else{
+                aIdx = '0%';
+            }
+
+            $('m-02 p').eq(0).animate({
+                left:aIdx
+                },1000,'easeOutElastic',function(){
+                    aIdx = 0;
+                    $(this).animate({left:aIdx});
+                });
+
+                $('.m-02 p').eq(1).animate({
+                    right:aIdx
+                },1000,'easeOutElastic');
+        });
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

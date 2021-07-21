@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- 7_loop.html -->
+<div class="gugu"></div>
+<style>
+    .gugu{display:flex;}
+    .gugu p{
+        padding:30px;
+        border:1px solid #000;
+        line-height: 2;
+    }
+</style>
+
+<script>
+    const elGugu = document.querySelector('.gugu');
+    let i=1,j=2,msg='';
+
+    while(j<10){
+    // 단
+        msg +='<p>';
+        while(i<10){
+            msg += `${j}X${i}=${j*i} <br>`;
+            i++;
+        }
+        msg +='</p>';
+        j++;
+        i=1;
+    }
+    elGugu.innerHTML = msg;
+
+</script>
+    
+
+
+<div class="jumin">
+    <input type="text">
+    <button>주민번호체크</button>
+</div>
+<script>
+    const elInput = document.querySelector('.jumin input');
+    const elBtn = document.querySelector('.jumin button');
+
+    elBtn.addEventListener('click',function(){
+        let num = elInput.value,
+            key = [2,3,4,5,6,7,8,9,2,3,4,5],
+            total = 0;
+
+        for(let i in key){
+            total += key[i] * num[i];
+        }
+        
+        let checkNum = Math.floor(  (11-(total%11))%10  );
+        if(num[12] == checkNum){
+            alert('정상')
+        }else{
+            alert('비정상')
+        }        
+    });
+    
+</script>
+
+
+</body>
+</html>

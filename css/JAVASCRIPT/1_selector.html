@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- selertor.html -->
+    <div class="el" id="el">
+        <p>선택자1</p>
+        <p>선택자2</p>
+        <p>선택자3</p>
+    </div>
+
+
+    <script>
+        // hoisting (호이스팅)
+        // 스크립트 확장자는 .js
+        // js파일은 메일로 공유가 안됨. 
+        // js폴더 :zip
+        // css폴더 & index.html : zip 같이 묶어서 보낸다.
+
+        //스타일 넣어줄 때
+
+        var elClass, elAll, elID, tag;
+
+            // class 선택자
+            elClass = document.querySelector('.el');
+            elClass = document.getElementsByClassName('el');
+
+            // id 선택자
+            elID = document.querySelector('#el');
+            elID = document.getElementById('el');
+
+            // 태그명 선택자
+            tag = document.getElementsByTagName('p');
+
+            //css api(클래스, 아이디, 태그 통합 선택자)
+            //queryselector(한개의 선택자)
+            //queryselectorAll(여러개의 선택자)
+            elAll = document.querySelectorAll('p');
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

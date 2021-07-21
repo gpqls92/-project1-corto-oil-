@@ -1,0 +1,9 @@
+sibling
+
+complete -> 클릭해도 아무 변화가 없음
+
+hot클래스 -> cool클래스로 변경
+
+cool클래스 -> hot클래스로 변경
+
+클래스 명이 없으면 -> complete클래스 추가

@@ -27,11 +27,16 @@
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/common.js"></script>
 </head>
 <body>
 
+
+    <div class="popup active blank padd aadff"  id="popup">
     <div class="node-1" id="node1">
-        <div class="active">
+        <figure class="active"><img src="img/main/Shape 1.png" alt="popupclose"></figure>
+    </div>
+        <div>
             <h3>Reserve Your <em>Complimentary</em><br> Tasting Appointment</h3>
             <p>
                 We say tasting is believing. Reserve a tasting<br> appointment with our oil experts!<br>
@@ -39,62 +44,14 @@
             </p>
             <a href="provide.html">Book Now</a>
         </div>
-        <figure class="active" id="popup">
+        <figure>
             <img src="img/main/popup.jpg" alt="popupimg">
         </figure>
     </div>
-    <script>
-        body.addEventListener('click',function(){
-            let target = event.target;
-            console.log(target.scr)
-    
-            if(event.target.nodeName == 'body'){
-                photo.src = target.src;
-                node1.classList.add('.node-1');
-            }
-        });
-        
-        node1.addEventListener('click',function(){
-            if(event.target.classList.contains('.node-1')){
-                node1.classList.remove('.node-1');
-                }
-        })
-    </script>
 
 
-    <header class="header">
-        <div>
-            <p>FREE shipping on all Online Orders.</p>
-        </div>
+    <header class="header"></header>
 
-        <div>
-            <h1><a href="index.html">CORTO</a></h1>
-            <div class="menu">
-                <a href="procedure.html">PROCEDURE</a>
-                <a href="products.html">PRODUCTS</a>
-                <a href="provide.html">PROVIDE</a>
-            </div>
-            <figure>
-                <a href="https://www.instagram.com/corto_olive/" class="active"><img src="img/pg_instar.png" alt="instagram"></a>
-                <a href="https://www.facebook.com/CortoOlive/"><img src="img/pg_facebook.png" alt="facebook"></a>
-                <a href="https://corto-olive.com/"><img src="img/pg_message.png" alt="message"></a>
-            </figure> 
-            
-            <a class="menu-trigger">
-                <span class="active-1"></span>
-                <span></span>
-                <span></span>
-            </a> 
-        </div>
-    </header>
-    <script>
-        const elBurger = document.querySelector('.menu-trigger');
-        const elNav = document.querySelector('.menu');
-        elBurger.addEventListener('click',function(){
-            this.classList.toggle('active-1');
-            elNav.classList.toggle('active');
-        })
-    </script>
 
 
     <main>
@@ -106,9 +63,6 @@
         <p>SO TASTY/ SO DELICIOUS/ SO FRESH</p>
         </div>
 
-
-
-        
         <div class="body-2">
             <figure><img src="img/main/olive.jpg" alt="olive_img"></figure>
             <div>
@@ -203,58 +157,10 @@
             </figure> 
         </div>
     </main>
-    <script type="text/javascript">
-        $(".follow").slick({
-            arrows: false,
-            dots:true,
-            intinite:true,
-            slidesToShow: 6,
-            slidesToScroll: 6,
-            autoplay:true,
-            autoplaySpeed:3000,
 
-            responsive:[{
-                breakpoint :360,
-                sttings: {
-                    arrows:false,
-                    slidesToShow:2,
-                    slidesToScroll:2,
-                }
-            }]
-        }); 
-    </script>
-
+    <footer class="footer"></footer>
     
-
-   <footer class="footer">
-        <div>
-            <a href="index.html">CORTO</a>
-            <nav class="menu">
-                <a href="https://corto-olive.com/policies/terms-of-service">INFORMATION</a>
-                <a href="https://corto-olive.com/">CONTACT</a>
-                <a href="https://corto-olive.com/policies/privacy-policy">PRIVACY POLICY</a>
-            </nav>
-            <figure>
-                <a href="https://www.instagram.com/corto_olive/"><img src="img/pg_instar.png" alt="instagram_img"></a>
-                <a href="https://www.facebook.com/CortoOlive/"><img src="img/pg_facebook.png" alt="facebook_img"></a>
-                <a href="https://corto-olive.com/"><img src="img/pg_message.png" alt="message_img"></a>
-            </figure> 
-        </div>
-        <div>
-            <address>
-                <p>Inc. CORTO │ PO BOX 1706 LODI, CA 95241</p>
-                <p>E-Mail : INFO@CORTO-OLIVE.com</p>
-                <p>ⓒCOPYRIGHT CORTO ALL RIGHT RESERVED</p>
-            </address>
-            <img src="img/bn_footer.png" alt="payment_img">
-        </div>
-    </footer>
-    
-
-    <aside class="top">
-        <a href="#">
-        <img src="img/top_5.png" alt="back_to_top"></a>
-    </aside>
+    <aside class="top"></aside>
 
 </body>
 </html>

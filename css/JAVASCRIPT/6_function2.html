@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 6_function2.html -->
+
+
+<script>
+    //함수표현식을 이용한 인수 전달 방식
+    let fun1 = function(a, b){
+        return a+b;
+    }
+    let total = fun1(10,20);
+    console.log( total );
+
+
+    //fun2 여러 파라미터값을 arguments로 처리
+    let fun2 = function(name, ...args){
+        // console.log(name);
+        // console.log(args);
+
+        let total = 0;
+        for(let i=0; i<arguments.length; i++){
+            if(typeof arguments[i]=='number'){
+            total += arguments[i];
+            }
+        }
+        return total;
+    }
+    console.log( fun2('홍길동',50,60,70,80,90,100) );
+
+
+
+    //fun3 array배열 처리
+    let arr = [10,20,30,40,50];
+    let fun3 = function(data){
+        let total = 0;
+
+        for(let i in data){
+            total += data[i]
+        }
+
+        for(let i of data){
+            console.log(i);
+        }
+
+        return total;
+    }
+    console.log( fun3(arr) );
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
