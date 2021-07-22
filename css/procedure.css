@@ -374,6 +374,7 @@
     display:block;
     justify-content: space-between;
     align-items: center;
+    text-align:center;
     border-bottom: 1px solid #bf9000;
 }
 .body-2 figure{ 
@@ -430,6 +431,7 @@
     display:block;
     justify-content: space-between;
     align-items: center;
+    text-align:center;
     border-bottom: 1px solid #bf9000;
 }
 .body-3 figure{ 
@@ -485,6 +487,7 @@
     display:block;
     justify-content: space-between;
     align-items: center;
+    text-align:center;
     border-bottom: 1px solid #bf9000;
 }
 .body-4 figure{ 
