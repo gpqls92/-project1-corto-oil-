@@ -169,13 +169,13 @@
         /* float: left; */
     }
     .body-3 li:hover{
-        transform:scale(1.3);  
+        transform:scale(1.2);  
     }
     .body-3 ul li address{
         padding: 0px 10px;
         text-align: center; 
         position: absolute;
-        top: 50%; left: 50%;
+        top: 60%; left: 50%;
         transform: translate(-50%, -50%);
         line-height: 1.6;
         font-size: 2rem;color: #333;
@@ -188,22 +188,54 @@
         text-align: center;
         font-weight: normal;
     }
+    .body-3 li address a{
+        font-weight: bold;
+        font-size: 1.3rem;
+        color: rgb(104, 103, 103);
+    }
     .body-3 li img{
         width: 100%; 
     }
 
     .body-3 .popup2{
-        position: relative;
+        margin: 20px 0;
+        padding: 1% 20% 5% 20%;
+        position:relative;
         left: 0;top: 0;
         width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.6);
 
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        color: #fff;
+        text-align: center;
+        color: #775a02;
         display: none;
+    }
+    .body-3 .popup2 h3{
+        padding: 20px;
+        font-size: 2rem;
+        color: #775a02;
+        text-align: center;
+    }
+    .body-3 .popup2 div{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    .body-3 .popup2 a{
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: #6e6e6d;
+        background-color:#bf9000;
+        text-decoration: none;
+        color:#fefffd;         
+    }
+    .body-3 .popup2 a:hover{
+        background-color: #775a02;
+        color:#fefffd;
+        font-weight: bold;
     }
     /* .body-3 li .text p{
         font-size: 0.8rem;
@@ -482,21 +514,45 @@ h1,h2,h3,h4{
         text-align: center;
         font-weight: normal;
     }
+    .body-3 li address a{
+        font-weight: bold;
+        font-size: 1.3rem;
+        color: rgb(104, 103, 103);
+    }
     .body-3 li img{
         width: 100%; 
     }
     .body-3 .popup2{
-        position: relative;
+        margin: 20px 0;
+        padding: 5% 20%;
+        position:relative;
         left: 0;top: 0;
         width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.6);
 
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        color: #fff;
+        text-align: center;
+        color: #775a02;
         display: none;
+    }
+    .body-3 .popup2 h3{
+        padding: 20px;
+        font-size: 2rem;
+        color: #775a02;
+        text-align: center;
+    }
+    .body-3 .popup2 div{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    .body-3 .popup2 a{
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: #6e6e6d;
     }
     /* .body-3 li .text p{
         font-size: 0.8rem;
@@ -759,21 +815,45 @@ h1,h2,h3,h4{
         text-align: center;
         font-weight: normal;
     }
+    .body-3 li address a{
+        font-weight: bold;
+        font-size: 1.3rem;
+        color: rgb(104, 103, 103);
+    }
     .body-3 li img{
         width: 100%; 
     }
     .body-3 .popup2{
-        position: relative;
+        margin: 0 0 10px 0;
+        padding: 1% 20% 5% 20%;
+        position:relative;
         left: 0;top: 0;
         width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.6);
 
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        color: #fff;
+        text-align: center;
+        color: #775a02;
         display: none;
+    }
+    .body-3 .popup2 h3{
+        padding: 20px;
+        font-size: 2rem;
+        border-bottom: #775a02;
+        text-align: center;
+    }
+    .body-3 .popup2 div{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    .body-3 .popup2 a{
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: #6e6e6d;
     }
     /* .body-3 li .text p{
         font-size: 0.8rem;

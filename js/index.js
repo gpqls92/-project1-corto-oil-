@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded',function(){
                 
                 data.founed.forEach(function(v){
                     tagList += `<li>
-                                    <address>${v.name}<br><p>${v.subname}</p></address>
+                                    <address>${v.name}<br><p>${v.subname}</p><a>click</a></address>
                                     <img src="${v.photo}" alt="${v.name}">
                                 </li>`;
                 });
@@ -29,11 +29,11 @@ window.addEventListener('DOMContentLoaded',function(){
                 detail = data.founed[idx].detail;
                 
 
-                tagList = `<h2>${tit} <br> [${subtit}] </h2>
+                tagList = `<h3>${tit} <br> [${subtit}] </h3>
                             
                             <div>
-                                ${detail}
-                                <a href="${link}" target="blank">
+                                ${detail}<br>
+                                <a href="${link}" target="blank"><br>
                                     Shortcut
                                 </a>
                             </div>`;
