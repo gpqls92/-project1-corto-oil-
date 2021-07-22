@@ -18,13 +18,13 @@
 /* .text */
 .text{
     margin: 0 auto;
-    padding: 50px 50px 20px 50px;
+    padding: 0;
     text-align: center;
     /* background-color: blanchedalmond; */
 }
 .text article{margin: 10%;}
 .text article h2{
-    margin: 80px 20px 20px 20px;
+    margin: 60px 20px 20px 20px;
     font-size: 2.2rem;}
 .text article h4{
     margin: 0;
@@ -33,7 +33,7 @@
 
 }
 .text article p{
-    margin: 30px;
+    margin: 10px;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -45,7 +45,7 @@
 .table{
     margin: 0; 
     padding: 5%;
-    width:70%; margin:0 auto;
+    width:70%; margin:0 auto 100px;
     background-color: #f4f4f1;
     /* font-weight: bold; */
 }
@@ -107,34 +107,36 @@ input[type='submit']{
         color:#555;
     }
     /* .text */
-.text{
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-    /* background-color: blanchedalmond; */
-}
-.text span{margin: 10%;}
-.text span h2{
-    margin: 20px 20px 20px 20px;
-    font-size: 2rem;}
-.text span h4{
-    margin: 0;
-    font-size: 1rem;
-    font-weight: normal;
 
-}
-.text span p{
-    margin: 30px;
-    font-size: 16px;
-    font-weight: bold;
-}
 
+    /* .text */
+    .text{
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        /* background-color: blanchedalmond; */
+    }
+    .text article{margin: 5%;}
+    .text article h2{
+        margin: 60px 20px 20px 20px;
+        font-size: 2.2rem;}
+    .text article h4{
+        margin: 0;
+        font-size: 1rem;
+        font-weight: normal;
+
+    }
+    .text article p{
+        margin: 10px 0 30px 0; 
+        font-size: 1rem;
+        font-weight: bold;
+    }
 
 /* .table */
 .table{
     margin: 0; 
     padding: 5%;
-    width:80%; margin:0 auto;
+    width:80%; margin:0 auto 50px;
     background-color: #f4f4f1;
     /* font-weight: bold; */
 }
@@ -198,26 +200,25 @@ input[type='submit']{
     /* .text */
     .text{
         margin: 0 auto;
-        padding: 50px 50px 20px 50px;
+        padding: 0;
         text-align: center;
         /* background-color: blanchedalmond; */
     }
-    .text span{margin: 10%;}
-    .text span h2{
-        margin: 80px 20px 20px 20px;
+    .text article{margin: 8%;}
+    .text article h2{
+        margin: 60px 20px 20px 20px;
         font-size: 2.2rem;}
-    .text span h4{
+    .text article h4{
         margin: 0;
         font-size: 1rem;
         font-weight: normal;
-
+    
     }
-    .text span p{
-        margin: 30px;
+    .text article p{
+        margin: 10px;
         font-size: 1rem;
         font-weight: bold;
     }
-
 
 
 
@@ -225,7 +226,7 @@ input[type='submit']{
     .table{
         margin: 0; 
         padding: 5%;
-        width:70%; margin:0 auto;
+        width:70%; margin:0 auto 100px;
         background-color: #f4f4f1;
         /* font-weight: bold; */
     }

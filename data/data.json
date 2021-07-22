@@ -1,0 +1,32 @@
+{
+    "founed":[
+        {
+            "name":"value1",
+            "subname":"Transparency",
+            "link":"https://corto-olive.com/pages/philosophy",
+            "detail":"What you see is what you get — our olive oil is as honest as our method, no over-processing or hidden ingredients.",
+            "photo":"./img/main/Polygon2.png"
+        },
+        {
+            "name":"value2",
+            "subname":"Quality",
+            "link":"https://corto-olive.com/pages/philosophy",
+            "detail":"We’re committed to giving you an unparalleled olive oil experience — one worth its weight in gold.",
+            "photo":"./img/main/Polygon2.png"
+        },
+        {
+            "name":"value3",
+            "subname":"Heritage",
+            "link":"https://corto-olive.com/pages/philosophy",
+            "detail":"From our Italian family origins, we’ve held onto beloved family traditions both in cooking and tending to our olive groves and that will never change.",
+            "photo":"./img/main/Polygon2.png"
+        },
+        {
+            "name":"value4",
+            "subname":"Innovation",
+            "link":"https://corto-olive.com/pages/philosophy",
+            "detail": "From our unique harvesting methods, to the one-of-a-kind packaging designs, we’re always looking to make our process as efficient, eco-friendly, and forward-thinking as possiboe.",
+            "photo":"./img/main/Polygon2.png"
+        }  
+    ]
+}
