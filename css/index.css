@@ -304,6 +304,43 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:768px){
 .header .footer{display: none;}
 html,body{margin:0;}
@@ -315,14 +352,9 @@ ul,li,ol{
 h1,h2,h3,h4,h5,h6,figure,p{margin:0;}
 img{vertical-align: top;}
 a{text-decoration: none;}
-
-
-
-
 h1,h2,h3,h4{
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
-
 *{ 
     font-family:sans-serif;
     box-sizing: border-box;
@@ -396,13 +428,7 @@ h1,h2,h3,h4{
 }
 
 
-
-
-
-
-
     /* .body-1 */
-
     .body-1 {
         text-align: center;
         background-color:#696644;
@@ -428,9 +454,7 @@ h1,h2,h3,h4{
     }
 
 
-
     /* .body-2 */
-
     .body-2{ 
         margin: 10% auto; 
         width: 80%;
@@ -447,29 +471,21 @@ h1,h2,h3,h4{
         /* box-sizing: border-box; */
         text-align:center;
     }
-
     .body-2 div h3{
         font-size:1.5rem; 
         margin: 20px 0;
     }
-
     .body-2 div h3 em{
         font-size:2rem; color: #97aa8a;
         font-family:Georgia, 'Times New Roman', Times, serif;
     }
-
     .body-2 div p{ 
         margin: 30px 0; color:#555; 
     }
     /* 이미지와 텍스트의 거리가 가까운데 어떻게 설정해야 할까요? */
 
     
-
-
-
-
     /* .body-3 */
-
     .body-3{
         width: 100%; 
         background-color: #6a7a01;
@@ -516,10 +532,13 @@ h1,h2,h3,h4{
         text-align: center;
         font-weight: normal;
     }
+    .body-3 li address{
+        margin: 10% 0;
+    }
     .body-3 li address a{
         font-weight: bold;
         font-size: 1.3rem;
-        color: rgb(104, 103, 103);
+        color: #bf9000;
     }
     .body-3 li img{
         width: 100%; 
@@ -532,7 +551,7 @@ h1,h2,h3,h4{
         width: 100%; height: 100%;
         background: rgba(0, 0, 0, 0.6);
 
-        display: none;
+        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -555,14 +574,19 @@ h1,h2,h3,h4{
         font-size: 1.7rem;
         font-weight: bold;
         color: #6e6e6d;
+        background-color:#bf9000;
+        text-decoration: none;
+        color:#fefffd;   
+    }
+    .body-3 .popup2 a:hover{
+        background-color: #775a02;
+        color:#fefffd;
+        font-weight: bold;
     }
     /* .body-3 li .text p{
         font-size: 0.8rem;
         text-align: center;
-    
     } */
-
-
     /* float;left로 가로정렬했을 때 다른 contents가 들어와 방해하고 background가 h2에만 적용됩니다.ㅠㅠ */
 
 
@@ -601,6 +625,24 @@ h1,h2,h3,h4{
         transform: scale(1.1);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
