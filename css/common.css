@@ -172,19 +172,20 @@ address{font-style: normal;}
         }
 
 
-
-
     /* .top */
-
     .top{
-        right: 0;
-        margin: 30px;
-        bottom: 30px;
+        margin: 0;       
         position: fixed;
+        right: 30px; 
+        bottom: 30px;
+        opacity: 0; /*.top.active와 같이 opacity값을 주도록 한다.*/
+        transition: .3s;
     }
-    .top img{
-        margin: 0;
-        height: 70px;
+    .top img{width: 80%;}
+    .top.active {
+        opacity: 1;
+        /*display: block이 자연스럽게 내려오지 
+        않기 때문에 opacity값과 transition으로 부드럽게 생기도록 한다.*/
     }
 
 
@@ -376,7 +377,7 @@ address{font-style: normal;}
     .footer > div img{
         margin:30px; 
         height:20px;
-        }
+    }
 
 
 
@@ -385,14 +386,16 @@ address{font-style: normal;}
 
     .top{
         display: none;
-        right: 0;
-        margin: 10px;
-        bottom: -1050px;
-        position:absolute;
+        margin: 0;        
+        position: fixed;
+        right: 30px; 
+        bottom: 30px;
+        opacity: 0;
+        transition: .3s;
     }
-    .top img{
-        margin: 0;
-        height: 50px;
+    .top img{height: 8%;}
+    .top.active {
+        opacity: 1;
     }
 }
 
@@ -567,13 +570,18 @@ address{font-style: normal;}
     /* .top */
 
     .top{
-        right: 0;
-        margin: 30px;
-        bottom: 30px;
+        margin: 0;        
         position: fixed;
+        right: 0; 
+        bottom: 20px;
+        opacity: 0;
+        transition: .3s;
     }
-    .top img{
-        margin: 0;
-        height: 45px;
+    .top img{width: 50%;}
+    .top.active {
+        opacity: 1;
     }
-}
+
+
+
+};

@@ -142,9 +142,9 @@ input[type='submit']{
 }
 
 .table li {
-   margin: 20px 0;
-   display:block;
-   justify-content: space-between;
+    margin: 20px 0;
+    display:block;
+    justify-content: space-between;
 }
 .table li p{
     min-width:45%;
@@ -152,18 +152,18 @@ input[type='submit']{
 }
 .table li p.w100{width:100%;}
 .table li input{
-   display: block;
-   margin: 0;
-   width:100%;
-   height: 30px;
-   border: none;
+    display: block;
+    margin: 0;
+    width:100%;
+    height: 30px;
+    border: none;
 }
 
 .table li:nth-of-type(7){
-   margin: 0 30%;
-   align-items: center;
-}
- 
+    margin: 0 30%;
+    align-items: center;
+    }
+    
 input[type='submit']{
     background: #97aa8a; 
     border: none; 
