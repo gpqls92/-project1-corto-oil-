@@ -6,13 +6,13 @@
     .node-1{
         position: absolute;
         width: 8%;
-        right: 10px;
-        top: 10px;
+        right: 100px;
+        top: 50px;
         margin: 0 auto;
 
     }
     .node-1 img{
-        width: 80%;
+        width: 60%;
         z-index: 4;
     }
     .popup{
@@ -27,7 +27,7 @@
         display: none;
     }
     .popup div{
-        padding: 60px 30px 0 0;
+        padding: 60px 40px 0 0;
         display: block;
     }
     .popup h3{
@@ -679,13 +679,12 @@ h1,h2,h3,h4{
 .node-1{
     position: absolute;
     width: 10%;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 0;
     margin: 0 auto;
-
 }
 .node-1 img{
-    width: 80%;
+    width: 60%;
     z-index: 4;
 }
 .popup{
