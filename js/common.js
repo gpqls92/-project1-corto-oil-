@@ -19,6 +19,27 @@ $(function(){
 
 
     }
+
+
+
+    function sideTop(){
+        /* aside */
+        const elAside = document.querySelector('.top');
+        
+        window.addEventListener('scroll',function(){
+            let domHei = document.documentElement.offsetHeight;
+            let winHei = window.innerHeight;
+
+            if(domHei - winHei <= window.scrollY){
+                console.log('최하단');
+            }
+            if(window.innerHeight < window.scrollY){
+                elAside.classList.add('active');
+            }else{
+                elAside.classList.remove('active');
+            }
+        })
+    }
     
 
 });
