@@ -180,9 +180,12 @@ address{font-style: normal;}
         bottom: 30px;
         opacity: 0; /*.top.active와 같이 opacity값을 주도록 한다.*/
         transition: .3s;
+        cursor: pointer;
+        display: none;
     }
-    .top img{width: 80%;}
+    .top img{width: 60%;}
     .top.active {
+        display: block;
         opacity: 1;
         /*display: block이 자연스럽게 내려오지 
         않기 때문에 opacity값과 transition으로 부드럽게 생기도록 한다.*/
@@ -392,9 +395,12 @@ address{font-style: normal;}
         bottom: 30px;
         opacity: 0;
         transition: .3s;
+        cursor: pointer;
+        display: none;
     }
     .top img{height: 8%;}
     .top.active {
+        display: block;
         opacity: 1;
     }
 }
@@ -576,11 +582,15 @@ address{font-style: normal;}
         bottom: 20px;
         opacity: 0;
         transition: .3s;
+        cursor: pointer;
+        display: none;
     }
     .top img{width: 50%;}
     .top.active {
+        display: block;
         opacity: 1;
     }
+
 
 
 

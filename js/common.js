@@ -2,7 +2,7 @@ $(function(){
 
     $('header').load('inc.html .header > div',header);
     $('footer').load('inc.html .footer');
-    $('aside').load('inc.html aside a,aside img')
+    $('aside').load('inc.html aside a', asideTop)
 
 
 
@@ -15,14 +15,11 @@ $(function(){
             this.classList.toggle('active-1');
             elNav.classList.toggle('active');
         });
-        sideTop()
-
-
     }
 
 
 
-    function sideTop(){
+    function asideTop(){
         /* aside */
         const elAside = document.querySelector('.top');
         
@@ -39,7 +36,14 @@ $(function(){
                 elAside.classList.remove('active');
             }
         })
+        elAside.addEventListener('click',function(e){
+            e.preventDefault();
+            window.scrollTo({
+                left:0, top:0, behavior : 'smooth'
+            });
+        });
     }
     
 
 });
+
