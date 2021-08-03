@@ -37,7 +37,7 @@ $(function(){
             }
         })
         elAside.addEventListener('click',function(e){
-            e.preventDefault();
+            // e.preventDefault();
             window.scrollTo({
                 left:0, top:0, behavior : 'smooth'
             });
