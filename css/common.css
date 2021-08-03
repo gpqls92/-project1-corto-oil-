@@ -402,6 +402,7 @@ address{font-style: normal;}
     .top.active {
         display: block;
         opacity: 1;
+        display: none;
     }
 }
 
